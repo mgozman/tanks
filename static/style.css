@@ -1,0 +1,181 @@
+#page{
+    background-color: rgb(226, 224, 224) !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.game_over{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 52px;
+    padding: 20% 30% !important;
+}
+.get_name{
+    margin: 5% 35%;
+}
+.btn_submit {
+    border-radius: 3px;
+    border: 1px solid grey;
+    margin: 20px 20%;
+    padding: 5px 40px;
+    box-shadow: 2px 2px 4px 0px black;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.btn_submit:active {
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+}
+.effect2{
+    position: relative;
+}
+.effect2:before, .effect2:after{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+.effect2:after{
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+.box {
+    padding: 0px 30px;
+    background:#FFF;
+}
+.container{
+    margin : 0px !important;
+    padding : 0px !important;
+    position: relative;
+    width: auto !important;
+}
+.wall{
+    background-image: url("img/brick.jpg");
+}
+.blank{
+    background: black;
+}
+.cell{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+}
+.white_brick{
+    background-image: url("img/white_brick.jpg");
+}
+.eagle{
+    background-image: url("img/eagle.jpg");
+}
+.player{
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    transition: left 0.2s linear 0s, top 0.2s linear 0s;
+}
+.player1_up{
+    background-image: url("img/player1_up.jpg");
+}
+.player1_left{
+    background-image: url("img/player1_left.jpg");
+}
+.player1_right{
+    background-image: url("img/player1_right.jpg");
+}
+.player1_down{
+    background-image: url("img/player1_down.jpg");
+}
+.player2_up{
+    background-image: url("img/player2_up.jpg");
+}
+.player2_left{
+    background-image: url("img/player2_left.jpg");
+}
+.player2_right{
+    background-image: url("img/player2_right.jpg");
+}
+.player2_down{
+    background-image: url("img/player2_down.jpg");
+}
+.eagle_boom{
+    background-color: red !important;
+    clip-path: polygon(100% 50%,84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%)
+}
+.boom{
+    /* background-size: cover;
+    background-image: url("img/boom.png"); */
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: white;   
+    clip-path: polygon(100% 50%,84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%)
+}
+#info{
+    font-size: 22px;
+    color: black;
+    padding: 0px 50px;
+}
+.table_players{
+    margin: 0px 35%;
+    width: 30%;
+}
+.missile{
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    background-color: white;
+    border-radius: 3px;
+    transition: left 0.1s linear 0s, top 0.1s linear 0s;
+}
+.enemy{
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    background-size: cover;
+    transition: left 0.2s linear 0s, top 0.2s linear 0s;
+}
+.enemy_up{
+    background-image: url("img/enemy_up.jpg");
+}
+.enemy_left{
+    background-image: url("img/enemy_left.jpg");
+}
+.enemy_right{
+    background-image: url("img/enemy_right.jpg");
+}
+.enemy_down{
+    background-image: url("img/enemy_down.jpg");
+}
+.row {
+    flex-wrap: nowrap !important;
+}
