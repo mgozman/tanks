@@ -154,7 +154,6 @@ io.on('connection', function(socket) {
         }
         if (user.x === x && user.y === y && user.player != missile.player){
             //game over
-            console.log('Game over');
             io.clients().sockets[user.id].emit('game_over');   
             if (partner){
                 io.clients().sockets[partner.id].emit('remove_player', user);   
@@ -183,7 +182,6 @@ io.on('connection', function(socket) {
         }
         if (field[y] && field[y][x] && field[y][x] == 3){
             //game over
-            console.log('Eagle killed');
             io.clients().sockets[game.player1.id].emit('game_over');
             if (game.player2){
                 io.clients().sockets[game.player2.id].emit('game_over');
@@ -211,12 +209,10 @@ io.on('connection', function(socket) {
             
             if (field[enemy.y - offset_y] && offset_y != 0 && field[enemy.y - offset_y][enemy.x] <= 1){
                 enemy.y -= offset_y;
-                console.log('move y');
                 enemy.position = offset_y > 0 ? "up" : "down";
             } else {
                 if (enemy.x - offset_x > 0 && enemy.x - offset_x < field[enemy.y].length && field[enemy.y][enemy.x - offset_x] <= 1){
                     enemy.x -= offset_x;
-                    console.log('move x');
                     enemy.position = offset_x > 0 ? "left" : "right";
                     
                 }
